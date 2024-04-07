@@ -1,3 +1,3 @@
 ﻿using CreateCshool;
 
-Console.WriteLine("Введите имя школы:  ");
+Console.WriteLine("Введите имя школы: ");
