@@ -11,6 +11,7 @@ namespace CreateCshool
         {
             Name = name;
             Students = new List<Student>();
+            Console.WriteLine($"Имя школы задано! Текущее имя: {Name}");
         }
     }
     
