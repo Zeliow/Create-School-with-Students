@@ -11,12 +11,32 @@ while (true)
     string anwser = Console.ReadLine();
 	switch (anwser)
 	{
-		case "1": addInListnewStudent(); break;
-        case "2": removeFromListStudent(); break;
+        case "1": GetListStudents(); break;
+		case "2": addInListnewStudent(); break;
+        case "3": removeFromListStudent(); break;
 		default:
 			break;
 	}
 }
+
+void GetListStudents()
+{
+    if (newSchool.Students.Count == 0) Console.WriteLine("Текущий список учеников пуст!");
+    else
+    {
+        int id = 1;
+        foreach (var item in newSchool.Students)
+        {
+            
+            //add id
+            Console.WriteLine($"{"ID",-10}{"Name",-10}{"LastName",-10}{"Age",-10}");
+            Console.WriteLine($"{id,-10}{item.FirstName,-10}{item.LastName,-10}{item.Age,-10}");
+            id++;
+        }
+    }
+
+}
+
 void addInListnewStudent()
 {
     Console.Write("Введите имя ученика: ");
@@ -31,6 +51,6 @@ void addInListnewStudent()
 
 void removeFromListStudent()
 {
-    //id студента 
-    //id 
+    int numberStudent = int.Parse(Console.ReadLine());
+    newSchool.Students.RemoveAt(numberStudent);
 }
