@@ -7,9 +7,9 @@ namespace LibStudent
     {
         public string FirstName;
         public string LastName;
-        public uint Age;
+        public int Age;
 
-        public Student (string firstName, string lastName, uint age)
+        public Student (string firstName, string lastName, int age)
         {
             FirstName = firstName;
             LastName = lastName;
